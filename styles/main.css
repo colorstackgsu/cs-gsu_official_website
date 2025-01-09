@@ -137,14 +137,134 @@ nav ul li a.member-btn:hover {
 }
 
 /* Student Name */
-.student-page .student-card p {
+.student-page .student-card a {
+    display: block;
     font-size: 16px;
     color: #003D8B;
+    text-align: center;
+    text-decoration: none;
     font-weight: bold;
-    margin: 0;
+    margin-top: 8px;
+}
+
+.student-page .student-card a:hover {
+    color: #E0A84C; /* Change color on hover */
 }
 
 
+/* Student Profile Page*/
+
+/* Back Button Style */
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: #003D8B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #E0A84C;
+    color: #003D8B;
+}
 
 
+.profile-page{
+    background-color:#00264D; 
+}
 
+/* Profile Header Styling */
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 40px;
+}
+
+
+/* Profile Image Styling */
+.profile-header img {
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Profile Info Styling (Name and Bio) */
+.profile-info h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+    margin-left: 30px;
+    width: 850px;
+    height: 850px;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.profile-info h2{
+    font-size: 16px;
+    color:#E0A84C;
+    margin-left: 30px;
+    font-style: italic;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the email and LinkedIn icon */
+}
+
+/* LinkedIn Icon Styling */
+.linkedin-icon img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.linkedin-icon img:hover {
+    transform: scale(1.1);
+}
+
+.resume-section{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -30px;
+}
+
+/* Blue Box Styling */
+.resume-box {
+    background-color: #387EC4; /* Blue color */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    margin: -20px auto 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* PDF Embed Styling */
+.resume-box iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    border-radius: 5px;
+}
+   
+body, html, .profile-page, .profile-info {
+    margin: 0;
+    padding: 0;
+}
