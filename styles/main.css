@@ -15,6 +15,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
+    z-index: 10; /* Higher than the SVG */
 }
 
 
@@ -254,6 +255,7 @@ nav ul li a.member-btn:hover {
     max-width: 900px;
     margin: -20px auto 0 auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -600px;
 }
 
 /* PDF Embed Styling */
@@ -267,4 +269,187 @@ nav ul li a.member-btn:hover {
 body, html, .profile-page, .profile-info {
     margin: 0;
     padding: 0;
+}
+
+
+/* About us PAGE*/
+
+/* nav bar*/
+
+
+.about-page{
+   background-color: white;
+}
+
+.about-page nav a {
+    color: #00264D;
+}
+
+.about-page-img img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 2%;
+}
+
+/* animation*/
+#home-anim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* SVG stays in the background */
+    opacity: 0.9;
+    margin-top: 100px;
+    pointer-events: none;
+}
+
+#home {
+    clip-path: url(#cache);
+  }
+  
+  #red {
+    fill: none;
+    opacity: 0.15;
+    stroke: #CE1B5F;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+  
+  #blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  #light-blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 6;
+    stroke-miterlimit:10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;    
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+   }
+      }
+  
+  @keyframes show {
+    0% {
+      opacity: 0.15;
+   }
+    50% {
+      opacity: 0.2;
+   }
+    100% {
+      opacity: 0.15;
+   }
+      }
+  
+  
+  
+/* Profile Cards Section */
+.profile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+    margin-left: 60px;
+}
+
+/* Profile Card Styling */
+
+/* Profile Card A  */
+.profile-card-a {
+    display: flex;
+    align-items: center;
+    background-color: #E0A84C;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin:20px auto;
+    height: 250px;
+}
+
+.profile-card-a h2 {
+    color: #003D8B;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.profile-card-a a {
+    color: #003D8B;
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+/* Profile Card B  */
+.profile-card-b {
+    display: flex;
+    align-items: center;
+    background-color: #003D8B;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin:20px auto;
+    height: 250px;
+}
+
+.profile-card-b h2 {
+    color: #E0A84C;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.profile-card-b a {
+    color: #E0A84C;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.profile-card-a img,
+.profile-card-b img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15%;
+    margin-right: 20px;
+}
+
+.eboard-profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically relative to the image */
+}
+
+.profile-card-a p,
+.profile-card-b p {
+    color: white;
+    font-weight: bold;
 }
