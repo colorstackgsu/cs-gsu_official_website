@@ -230,11 +230,22 @@ nav ul li a.member-btn:hover {
 .linkedin-icon img {
     width: 24px;
     height: 24px;
-    border-radius: 50%;
+    border-radius: 20%;
     transition: transform 0.2s ease-in-out;
 }
 
 .linkedin-icon img:hover {
+    transform: scale(1.1);
+}
+
+.instagram-icon img{
+    width: 24px;
+    height: 24px;
+    border-radius: 20%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.instagram-icon img:hover {
     transform: scale(1.1);
 }
 
@@ -452,4 +463,62 @@ body, html, .profile-page, .profile-info {
 .profile-card-b p {
     color: white;
     font-weight: bold;
+}
+
+
+/* BECOME A MEMBER*/
+
+.member-page{
+    background-color: #003D8B;
+}
+
+.member-page nav a {
+    color: white;
+}
+
+/* Container for the image */
+.membership-img {
+    position: relative; /* Set relative position to use absolute positioning inside */
+    width: 80%;
+    margin: 2% auto;
+}
+
+/* Styling for the image */
+.membership-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Styling for the text box overlay */
+.info-box {
+    position: absolute; /* Absolute position to overlay on top of the image */
+    top: 50%; /* Adjust vertical position */
+    left: 50%; /* Adjust horizontal position */
+    transform: translate(-50%, -50%); /* Center the text box */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 140px;
+    z-index: 10; /* Ensure it's above the image */
+    width: 70%; /* Adjust width to fit nicely */
+}
+
+/* Styling for the text inside the box */
+.info-box h2 {
+    color: #003D8B;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.official_colorstack_logo img{
+    width: 200px;
+    height: auto;
+}
+
+.pins_logo img{
+    width: 280px;
+    height: auto;
 }
